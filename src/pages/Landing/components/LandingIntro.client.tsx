@@ -1,6 +1,6 @@
-import Typical from 'react-typical';
-
 import { styled } from '../../../stitches.config';
+
+import Typical from './LandingTypical.client';
 
 const IntroWrapper = styled('section', {
   width: '100%',
