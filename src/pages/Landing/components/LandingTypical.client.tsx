@@ -5,6 +5,14 @@
 import { useRef, useEffect, memo } from 'react';
 
 import { type, type as loopedType } from '../../../lib/typical';
+import { styled } from '../../../stitches.config';
+
+const TypedText = styled('span', {
+  '&::after': {
+    content: '|',
+    animation: 'type-blink 0.8s infinite step-start',
+  },
+});
 
 const Typical = ({
   steps,
@@ -27,7 +35,7 @@ const Typical = ({
     }
   });
 
-  return <span ref={typicalRef} />;
+  return <TypedText ref={typicalRef} />;
 };
 
 export default memo(Typical);
